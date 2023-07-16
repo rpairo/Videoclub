@@ -9,10 +9,29 @@ use Alert;
 
 class CatalogController extends Controller
 {
-    public function getIndex()
+    public function getIndex(Request $request)
     {
-        $movies = Movie::all();
-    	return view('catalog.index', compact('movies'));
+        if ($request->has('filter')) {
+            switch ($request->filter) {
+                case 'rented':
+                    $movies = Movie::where('rented', true)->get();
+                    break;
+                case 'available':
+                    $movies = Movie::where('rented', false)->get();
+                    break;
+                default:
+                    $movies = Movie::all();
+                    break;
+            }
+        } else {
+            $movies = Movie::all();
+        }
+    
+        if ($request->ajax()) {
+            return view('partials.movies', compact('movies'))->render();
+        }
+    
+        return view('catalog.index', compact('movies'));
     }
 
     public function getShow($id)
