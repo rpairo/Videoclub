@@ -6,14 +6,13 @@ Este proyecto Laravel es un sistema de videoclub que incluye roles de "Customer"
 
 - Registro y autenticación de usuarios
 - Roles de usuario:
-  - **Admin**: tiene acceso completo al sistema, incluyendo la administración de usuarios y películas.
-  - **Customer**: tiene acceso limitado y solo puede alquilar películas.
+  - **Admin**: tiene acceso completo al sistema, incluyendo la administración completa de películas.
+  - **Customer**: tiene acceso limitado y solo puede alquilar y devolver películas.
 - Catálogo de películas:
   - Las películas se pueden marcar como "disponibles" o "alquiladas".
-  - Los usuarios "Customer" pueden filtrar el catálogo para mostrar solo las películas disponibles para alquilar.
+  - Los usuarios pueden filtrar el catálogo para mostrar solo las películas disponibles para alquilar.
 - Gestión de usuarios (solo para el rol de Admin):
-  - Creación, edición y eliminación de usuarios.
-  - Asignación de roles a los usuarios.
+  - Creación, edición y eliminación de peliculas.
 
 ## Usuarios de Prueba
 
