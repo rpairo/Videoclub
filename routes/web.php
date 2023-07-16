@@ -19,14 +19,15 @@ use App\Http\Controllers\CatalogController;
 Route::middleware(['auth'])->group(function () {
     Route::get('/catalog', [CatalogController::class, 'getIndex'])->name('catalog.index');
     Route::get('/catalog/show/{id}', [CatalogController::class, 'getShow'])->name('catalog.show');
-    Route::get('/catalog/create', [CatalogController::class, 'getCreate']);
-    Route::get('/catalog/edit/{id}', [CatalogController::class, 'getEdit']);
-
-    Route::post('/catalog/create', [CatalogController::class, 'postCreate'])->name('catalog.store');
-    Route::put('/catalog/edit/{id}', [CatalogController::class, 'putEdit'])->name('catalog.update');
-
     Route::put('/catalog/rent/{id}', [CatalogController::class, 'putRent'])->name('catalog.rent');
     Route::put('/catalog/return/{id}', [CatalogController::class, 'putReturn'])->name('catalog.return');
+});
+
+Route::middleware(['auth', 'role:admin'])->group(function () {
+    Route::get('/catalog/create', [CatalogController::class, 'getCreate']);
+    Route::get('/catalog/edit/{id}', [CatalogController::class, 'getEdit']);
+    Route::post('/catalog/create', [CatalogController::class, 'postCreate'])->name('catalog.store');
+    Route::put('/catalog/edit/{id}', [CatalogController::class, 'putEdit'])->name('catalog.update');
     Route::delete('/catalog/delete/{id}', [CatalogController::class, 'deleteMovie'])->name('catalog.delete');
 });
 

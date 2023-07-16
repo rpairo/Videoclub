@@ -6,6 +6,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\User;
+use App\Models\Role;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,6 +17,9 @@ class DatabaseSeeder extends Seeder
     {
         $this->seedCatalog();
         $this->command->info('Tabla catálogo inicializada con datos!');
+
+		$this->call(RolesTableSeeder::class);
+		$this->command->info('Tabla roles inicializada con datos!');
 
 		self::seedUsers();
     	$this->command->info('Tabla usuarios inicializada con datos!');
@@ -42,17 +46,22 @@ class DatabaseSeeder extends Seeder
         // Elimina el contenido existente de la tabla users
         User::truncate();
 
+		$adminRole = Role::where('name', 'admin')->first();
+        $customerRole = Role::where('name', 'customer')->first();
+
         // Crea los usuarios de prueba
         User::create([
 			'name' => 'Usuario 1',
 			'email' => 'usuario1@example.com',
 			'password' => bcrypt('password1'),
+			'role_id' => $adminRole->id,
 		]);
 		
 		User::create([
 			'name' => 'Usuario 2',
 			'email' => 'usuario2@example.com',
 			'password' => bcrypt('password2'),
+			'role_id' => $customerRole->id,
 		]);
     }
 

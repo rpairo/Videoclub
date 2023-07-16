@@ -5,7 +5,7 @@
 <div class="row">
 
     <div class="col-sm-4">
-        <img src="{{ $movie->poster }}" style="height:200px"/>
+        <img src="{{ $movie->poster }}" style="height:600px"/>
     </div>
     
     <div class="col-sm-8">
@@ -35,6 +35,7 @@
             </form>
         @endif
 
+        @if( Auth::user()->role->name == 'admin' )
         <a href="{{url('/catalog/edit/' . $movie->id)}}" class="btn btn-warning text-white"><i class="fas fa-pen"></i> Editar película</a>
 
         <!-- Eliminar película -->
@@ -45,6 +46,7 @@
                 Eliminar película
             </button>
         </form>
+        @endif
 
         <a href="{{url('/catalog')}}" class="btn btn-default" style="border: 1px solid black;"><i class="fas fa-chevron-left"></i> Volver al listado</a>
     </div>
