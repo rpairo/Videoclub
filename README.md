@@ -30,6 +30,39 @@ A continuación se detallan los usuarios de prueba predefinidos para probar el s
 
 **Nota**: Recuerda que estos son solo usuarios de prueba y no deben ser utilizados en un entorno de producción.
 
+Filtro con todas las peliculas
+![Captura de pantalla 2023-07-16 a las 19 17 31](https://github.com/rpairo/Videoclub/assets/14141324/73fd6a17-9626-44dc-9ea2-8b63ff9b2d6a)
+
+Filtro con las peliculas alquiladas
+![Captura de pantalla 2023-07-16 a las 19 17 14](https://github.com/rpairo/Videoclub/assets/14141324/d84ff7fb-817f-48df-92bc-951efd60b669)
+
+Login
+![Captura de pantalla 2023-07-16 a las 19 27 02](https://github.com/rpairo/Videoclub/assets/14141324/c8b71867-9534-4b30-ace4-fb91958cb135)
+
+Navbar siendo admin
+![Captura de pantalla 2023-07-16 a las 19 27 36](https://github.com/rpairo/Videoclub/assets/14141324/305d6527-511f-4fce-8db3-62a3a277a26b)
+
+Navbar siendo customer
+![Captura de pantalla 2023-07-16 a las 19 28 09](https://github.com/rpairo/Videoclub/assets/14141324/f9e2cfcb-9389-4512-a7cc-2e10c3293bc1)
+
+Pelicula siendo customer
+![Captura de pantalla 2023-07-16 a las 19 28 33](https://github.com/rpairo/Videoclub/assets/14141324/2ebfe613-4ce1-46c4-b6d0-4675921e51ce)
+
+Pelicula siendo admin
+![Captura de pantalla 2023-07-16 a las 19 29 11](https://github.com/rpairo/Videoclub/assets/14141324/b088ce4d-9fea-4e02-833c-dd63be40e189)
+
+Edicion de pelicula
+![Captura de pantalla 2023-07-16 a las 19 29 29](https://github.com/rpairo/Videoclub/assets/14141324/e7b8c9b1-351f-4c93-860a-42e7f12360c3)
+
+Creacion de pelicula
+![Captura de pantalla 2023-07-16 a las 19 29 47](https://github.com/rpairo/Videoclub/assets/14141324/949a89d7-e823-4fb9-b03b-3d1d76285aac)
+
+Acceso no autorizado (rol no permitido)
+![Captura de pantalla 2023-07-16 a las 19 30 44](https://github.com/rpairo/Videoclub/assets/14141324/963408dd-0d92-47d7-89d1-310783c6391a)
+
+Consumo de la API
+![Captura de pantalla 2023-07-16 a las 19 37 50](https://github.com/rpairo/Videoclub/assets/14141324/eda05902-e1bd-475e-919c-56b9a8128e98)
+
 ## Configuración y Ejecución del Proyecto
 
 1. Clona el repositorio del proyecto en tu máquina local:
